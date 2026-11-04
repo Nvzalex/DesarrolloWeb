@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Web Page</title>
+</head>
+
+<body>
+
+    <!-- Cabecera principal -->
+    <header>
+
+        <nav aria-label="Navegación principal">
+            <button type="button" aria-label="Abrir menú">☰</button>
+
+            <a href="/">
+                <img src="logo.png" alt="Logotipo">
+            </a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#" aria-label="Icono 1">
+                        <img src="icono1.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Icono 2">
+                        <img src="icono2.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Icono 3">
+                        <img src="icono3.svg" alt="">
+                    </a></li>
+            </ul>
+
+            <button type="button">Button</button>
+            <button type="button">Button</button>
+        </nav>
+
+        <h1>A Big Title</h1>
+
+        <!-- Navegación secundaria -->
+        <nav aria-label="Apartados">
+            <ul>
+                <li><a href="#">Apartado 1</a></li>
+                <li><a href="#">Apartado 1</a></li>
+                <li><a href="#">Apartado 1</a></li>
+                <li><a href="#">Apartado 1</a></li>
+            </ul>
+        </nav>
+
+        <!-- Buscador -->
+        <form role="search" action="#" method="get">
+            <label for="categoria">Categoría</label>
+            <select id="categoria" name="categoria">
+                <option value="">ComboBox</option>
+            </select>
+
+            <label for="busqueda">Buscar</label>
+            <input type="search" id="busqueda" name="busqueda">
+
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Tarjetas destacadas -->
+        <ul>
+            <li>
+                <article>
+                    <img src="imagen.png" alt="">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Texto de la tarjeta.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="imagen.png" alt="">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Texto de la tarjeta.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="imagen.png" alt="">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Texto de la tarjeta.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="imagen.png" alt="">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Texto de la tarjeta.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="imagen.png" alt="">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Texto de la tarjeta.</p>
+                </article>
+            </li>
+        </ul>
+
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección con cuatro artículos -->
+        <section aria-labelledby="titulo-seccion-1">
+
+            <header>
+                <h2 id="titulo-seccion-1">Título de la sección</h2>
+                <p>Subtítulo de la sección</p>
+                <button type="button">Button</button>
+            </header>
+
+            <div>
+                <article>
+                    <figure>
+                        <img src="imagen.png" alt="">
+                    </figure>
+                    <p>Texto descriptivo.</p>
+                    <a href="#">Más información</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="imagen.png" alt="">
+                    </figure>
+                    <p>Texto descriptivo.</p>
+                    <a href="#">Más información</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="imagen.png" alt="">
+                    </figure>
+                    <p>Texto descriptivo.</p>
+                    <a href="#">Más información</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="imagen.png" alt="">
+                    </figure>
+                    <p>Texto descriptivo.</p>
+                    <a href="#">Más información</a>
+                </article>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- Sección con dos artículos destacados -->
+        <section aria-label="Contenido destacado">
+
+            <article>
+                <figure>
+                    <img src="imagen-grande.png" alt="">
+                </figure>
+                <p>
+                    Párrafo descriptivo largo sobre el contenido destacado.
+                </p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="imagen-grande.png" alt="">
+                </figure>
+                <p>
+                    Párrafo descriptivo largo sobre el contenido destacado.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+
+        <!-- Logotipo, botones y redes sociales -->
+        <section aria-label="Marca y redes sociales">
+
+            <a href="/">
+                <img src="logo.png" alt="Logotipo">
+            </a>
+
+            <button type="button">Button</button>
+            <button type="button">Button</button>
+
+            <ul>
+                <li><a href="#" aria-label="Red social 1">
+                        <img src="red1.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Red social 2">
+                        <img src="red2.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Red social 3">
+                        <img src="red3.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Red social 4">
+                        <img src="red4.svg" alt="">
+                    </a></li>
+                <li><a href="#" aria-label="Red social 5">
+                        <img src="red5.svg" alt="">
+                    </a></li>
+            </ul>
+
+        </section>
+
+        <!-- Columnas de enlaces -->
+        <nav aria-label="Enlaces del pie de página">
+
+            <section>
+                <h2>A Subtitle</h2>
+                <ul>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>A Subtitle</h2>
+                <ul>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>A Subtitle</h2>
+                <ul>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>A Subtitle</h2>
+                <ul>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                    <li><a href="#">Item Three</a></li>
+                    <li><a href="#">Item One</a></li>
+                    <li><a href="#">Item Two</a></li>
+                </ul>
+            </section>
+
+        </nav>
+
+        <!-- Navegación inferior -->
+        <nav aria-label="Enlaces secundarios">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>

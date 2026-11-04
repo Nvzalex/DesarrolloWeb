@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usabilidad web | Aprende a diseñar mejor</title>
+    <style>
+      /* ESTILOS GENERALES */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #263238;
+        background-color: #f4f6f8;
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* CABECERA */
+      header {
+        background-color: #17324d;
+        color: white;
+        padding: 24px 6%;
+      }
+
+      .cabecera {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* CONTENIDO PRINCIPAL */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+
+      .introduccion {
+        background-color: white;
+        padding: 32px;
+        border-radius: 10px;
+        margin-bottom: 32px;
+      }
+
+      .introduccion h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      .introduccion p {
+        font-size: 1.1rem;
+        max-width: 750px;
+      }
+
+      .etiqueta {
+        display: inline-block;
+        background-color: #dceaf7;
+        color: #17324d;
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+
+      /* TARJETAS DE CONTENIDO */
+      .rejilla {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .tarjeta {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgb(0 0 0 / 8%);
+      }
+
+      .tarjeta img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .contenido-tarjeta {
+        padding: 22px;
+      }
+
+      .contenido-tarjeta h2 {
+        margin-top: 0;
+        font-size: 1.45rem;
+      }
+
+      .contenido-tarjeta p {
+        margin-bottom: 0;
+      }
+
+      /* BLOQUE DESTACADO */
+      .destacado {
+        margin-top: 32px;
+        padding: 28px;
+        border-left: 5px solid #2878a8;
+        background-color: #e8f2f8;
+        border-radius: 5px;
+      }
+
+      .destacado h2 {
+        margin-top: 0;
+      }
+
+      /* ÚLTIMA TARJETA */
+      .seccion-final {
+        margin-top: 36px;
+      }
+
+      /* PIE DE PÁGINA */
+      footer {
+        background-color: #17324d;
+        color: white;
+        text-align: center;
+        padding: 24px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+      @media (max-width: 650px) {
+        .cabecera {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav ul {
+          gap: 12px;
+        }
+
+        main {
+          padding: 20px 14px 40px;
+        }
+
+        .introduccion {
+          padding: 22px;
+        }
+
+        .introduccion h2 {
+          font-size: 1.7rem;
+        }
+
+        .rejilla {
+          grid-template-columns: 1fr;
+        }
+
+        .contenido-tarjeta {
+          padding: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="cabecera">
+        <h1 class="logo">Usabilidad Web</h1>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="#rendimiento">Rendimiento</a></li>
+            <li><a href="#navegacion">Navegación</a></li>
+            <li><a href="#accesibilidad">Accesibilidad</a></li>
+            <li><a href="#responsive">Responsive</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="introduccion">
+        <span class="etiqueta">Diseño de interfaces</span>
+        <h2>Una buena web no solo debe verse bien: debe funcionar bien</h2>
+        <p>
+          La usabilidad estudia hasta qué punto una página web permite a las
+          personas alcanzar sus objetivos de forma eficaz, eficiente y
+          satisfactoria. El rendimiento, la navegación, la accesibilidad y la
+          adaptación a diferentes dispositivos influyen directamente en la
+          experiencia de quienes utilizan una página.
+        </p>
+        <p>
+          En esta página exploraremos algunos de los principios fundamentales de
+          la usabilidad y cómo las decisiones técnicas de desarrollo pueden
+          mejorar o perjudicar la experiencia de usuario.
+        </p>
+      </section>
+      <section class="rejilla" aria-label="Principios de usabilidad">
+        <article class="tarjeta" id="rendimiento">
+          <img
+            src="imagenes/optimizadas/1200/1-1200.jpg"
+            srcset="
+              imagenes/optimizadas/700/1-700.webp    700w,
+              imagenes/optimizadas/1200/1-1200.webp 1200w,
+              imagenes/optimizadas/700/1-700.jpg     700w,
+              imagenes/optimizadas/1200/1-1200.jpg  1200w
+            "
+            sizes="(max-width: 650px) 100vw, 50vw"
+            alt="Puente de piedra histórico con estatuas y árboles otoñales bajo un cielo nublado"
+            width="1200"
+            height="798"
+            loading="eager"
+          />
+          <div class="contenido-tarjeta">
+            <h2>1. Rendimiento y velocidad de carga</h2>
+            <p>
+              Una página que tarda demasiado en mostrar su contenido puede
+              provocar frustración y abandono. El peso de las imágenes, los
+              archivos innecesarios y las peticiones de red influyen en el
+              tiempo que necesita el navegador para mostrar la web.
+            </p>
+            <p>
+              Optimizar los recursos permite reducir las descargas y mejorar la
+              experiencia, especialmente cuando la conexión es lenta o tiene
+              limitaciones.
+            </p>
+          </div>
+        </article>
+        <article class="tarjeta" id="navegacion">
+          <img
+            src="imagenes/optimizadas/1200/2-1200.jpg"
+            srcset="
+              imagenes/optimizadas/700/2-700.webp    700w,
+              imagenes/optimizadas/1200/2-1200.webp 1200w,
+              imagenes/optimizadas/700/2-700.jpg     700w,
+              imagenes/optimizadas/1200/2-1200.jpg  1200w
+            "
+            sizes="(max-width: 650px) 100vw, 50vw"
+            alt="Catedral gótica de Burgos con sus torres esbeltas bajo un cielo azul intenso"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+          <div class="contenido-tarjeta">
+            <h2>2. Navegación clara e intuitiva</h2>
+            <p>
+              Las personas deben poder identificar dónde están, qué opciones
+              tienen disponibles y cómo llegar al contenido que necesitan. Una
+              estructura coherente y unos enlaces descriptivos reducen el
+              esfuerzo necesario para navegar.
+            </p>
+            <p>
+              Los menús ambiguos y las categorías mal organizadas dificultan las
+              tareas y pueden hacer que los usuarios abandonen una página antes
+              de encontrar lo que buscan.
+            </p>
+          </div>
+        </article>
+        <article class="tarjeta" id="accesibilidad">
+          <img
+            src="imagenes/optimizadas/1200/3-1200.jpg"
+            srcset="
+              imagenes/optimizadas/700/3-700.webp    700w,
+              imagenes/optimizadas/1200/3-1200.webp 1200w,
+              imagenes/optimizadas/700/3-700.jpg     700w,
+              imagenes/optimizadas/1200/3-1200.jpg  1200w
+            "
+            sizes="(max-width: 650px) 100vw, 50vw"
+            alt="Vista aérea de la catedral de Burgos y la ciudad nevada en invierno"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+          <div class="contenido-tarjeta">
+            <h2>3. Accesibilidad y legibilidad</h2>
+            <p>
+              Una interfaz usable debe permitir que personas con distintas
+              capacidades puedan comprender el contenido y utilizar sus
+              funciones. El contraste, el tamaño del texto, el teclado y las
+              alternativas textuales son aspectos esenciales de una experiencia
+              accesible.
+            </p>
+            <p>
+              Diseñar teniendo en cuenta la accesibilidad también beneficia a
+              quienes utilizan la web en condiciones de iluminación
+              desfavorables o desde dispositivos pequeños.
+            </p>
+          </div>
+        </article>
+        <article class="tarjeta" id="responsive">
+          <img
+            src="imagenes/optimizadas/1200/4-1200.jpg"
+            srcset="
+              imagenes/optimizadas/700/4-700.webp    700w,
+              imagenes/optimizadas/1200/4-1200.webp 1200w,
+              imagenes/optimizadas/700/4-700.jpg     700w,
+              imagenes/optimizadas/1200/4-1200.jpg  1200w
+            "
+            sizes="(max-width: 650px) 100vw, 50vw"
+            alt="Pueblo medieval en una ladera con castillo y campo de girasoles secos en primer plano"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <div class="contenido-tarjeta">
+            <h2>4. Diseño responsive</h2>
+            <p>
+              Una página debe adaptarse a diferentes tamaños de pantalla sin
+              perder información ni funcionalidad. Los textos, las imágenes, los
+              menús y los botones deben seguir siendo comprensibles y
+              utilizables en móviles, tabletas y ordenadores.
+            </p>
+            <p>
+              El diseño responsive reorganiza la presentación del contenido y
+              evita que las personas tengan que ampliar continuamente la página
+              o desplazarse horizontalmente para leerla.
+            </p>
+          </div>
+        </article>
+      </section>
+      <aside class="destacado">
+        <h2>¿Por qué debemos medir la usabilidad?</h2>
+        <p>
+          Las decisiones de diseño no deberían basarse únicamente en gustos
+          personales. Podemos evaluar una interfaz observando si las personas
+          completan sus tareas, cuánto tardan, qué errores cometen y qué
+          dificultades encuentran durante la interacción.
+        </p>
+        <p>
+          Las pruebas comparativas permiten comprobar si una modificación
+          realmente mejora la experiencia o si introduce nuevos problemas.
+        </p>
+      </aside>
+      <section class="seccion-final" aria-label="Evaluación con usuarios">
+        <article class="tarjeta">
+          <img
+            src="imagenes/optimizadas/1200/5-1200.jpg"
+            srcset="
+              imagenes/optimizadas/700/5-700.webp    700w,
+              imagenes/optimizadas/1200/5-1200.webp 1200w,
+              imagenes/optimizadas/700/5-700.jpg     700w,
+              imagenes/optimizadas/1200/5-1200.jpg  1200w
+            "
+            sizes="(max-width: 650px) 100vw, 50vw"
+            alt="Claustro románico con columnas y capiteles esculpidos bajo un cielo azul"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+          <div class="contenido-tarjeta">
+            <h2>5. Evaluación con usuarios reales</h2>
+            <p>
+              Una interfaz puede parecer sencilla a quien la ha diseñado y
+              resultar confusa para otra persona. Observar a usuarios realizando
+              tareas concretas ayuda a descubrir dificultades que no siempre se
+              detectan durante el desarrollo.
+            </p>
+            <p>
+              Registrar los errores, los tiempos y los comentarios permite
+              proponer mejoras justificadas y comprobar posteriormente si las
+              soluciones funcionan.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Práctica de diseño de interfaces y usabilidad web</p>
+    </footer>
+  </body>
+</html>

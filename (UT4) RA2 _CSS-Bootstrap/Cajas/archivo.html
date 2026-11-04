@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .caja1 {
+        width: 250px;
+        padding: 15px 25px 15px 10px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+      }
+
+      .caja1 img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .caja1 h2 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 10px 0;
+        color: #333;
+      }
+
+      .caja1 .precio {
+        font-size: 22px;
+        font-weight: 700;
+        color: #000;
+        margin: 0 0 4px 0;
+      }
+
+      .caja1 .pvp {
+        font-size: 13px;
+        color: #888;
+        text-decoration: line-through;
+        margin-left: 6px;
+      }
+
+      .caja1 .valoracion {
+        font-size: 13px;
+        color: #333;
+        margin: 8px 0;
+      }
+
+      .caja1 .valoracion .estrellas {
+        color: #f5a623;
+      }
+
+      .caja1 .envio {
+        font-size: 13px;
+        color: #2e7d32;
+        margin: 8px 0;
+      }
+
+      .caja1 .envio .icono {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: #ff6f00;
+        border-radius: 2px;
+        margin-right: 4px;
+        vertical-align: middle;
+      }
+
+      .caja1 a {
+        font-size: 13px;
+        color: #0066c0;
+        text-decoration: none;
+      }
+
+      .caja1 a:hover {
+        text-decoration: underline;
+      }
+
+      /* ========== CAJA 2 ========== */
+      .caja2 {
+        width: 500px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #fff;
+      }
+
+      .caja2 figure {
+        margin: 0 0 12px 0;
+      }
+
+      .caja2 img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .caja2 figcaption {
+        font-size: 12px;
+        color: #666;
+        margin-top: 6px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .caja2 h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 12px 0;
+        color: #111;
+      }
+
+      .caja2 .meta {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .caja2 .meta span {
+        color: #888;
+      }
+
+      .caja2 p {
+        font-size: 16px;
+        line-height: 1.45;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ========== CAJA 3 ========== */
+      .caja3 {
+        width: 350px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+      }
+
+      .caja3 figure {
+        margin: 0;
+      }
+
+      .caja3 img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .caja3 .info {
+        background: #6b9e2e;
+        color: #fff;
+        padding: 18px 16px;
+        transition: background-color 0.25s ease;
+      }
+
+      .caja3:hover .info {
+        background: #1a5fb4;
+      }
+
+      .caja3 h2 {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+        letter-spacing: 0.3px;
+      }
+
+      .caja3 p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0 0 14px 0;
+      }
+
+      .caja3 a {
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .caja3 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="caja1">
+      <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
+      <h2>Portátil Alurin Flex Advance AMD Ryzen 5 7430 15.6" / 16 GB / 512GB / Windows 11 Home</h2>
+      <p class="precio">579,99€ <span class="pvp">PVP 589,99€</span></p>
+      <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · 135 opiniones</p>
+      <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+      <a href="#">Ver otras opciones</a>
+    </article>
+
+    <article class="caja2">
+      <figure>
+        <img src="./placeholder.png" alt="Ana Serrano, dueña de Pérgamo" />
+        <figcaption>La dueña de Pérgamo, Ana Serrano, en Madrid. INMA FLORES</figcaption>
+      </figure>
+      <h1>El cierre de la librería Pérgamo no es lo que parece: ni especulación, ni fondos buitres, ni otro ‘caso Maricarmen’</h1>
+      <p class="meta">LUCÍA FRANCO <span>|</span> Madrid</p>
+      <p>Los inquilinos buscan una nueva sede y llevarse la marca tras registrar el nombre, sin conocimiento de las dueñas, de un negocio que ha pertenecido a la misma familia durante 80 años</p>
+    </article>
+
+    <article class="caja3">
+      <figure>
+        <img src="./placeholder.png" alt="Dolor y rigidez matutina en la columna lumbar" />
+      </figure>
+      <div class="info">
+        <h2>Dolor y rigidez matutina en la columna lumbar</h2>
+        <p>El dolor, las molestias y la rigidez matutina suelen...</p>
+        <a href="#">Leer más...</a>
+      </div>
+    </article>
+  </body>
+</html>

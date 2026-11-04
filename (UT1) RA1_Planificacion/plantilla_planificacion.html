@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Estilo - Práctica</title>
+
+    <!-- ========================= -->
+    <!-- Fuente elegida GOOGLE FONTS - Poppins -->
+    <!-- ========================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ========================= -->
+    <!-- Fuente de iconos GOOGLE MATERIAL ICONS -->
+    <!-- ========================= -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        :root {
+            /* ========================= */
+            /* VARIABLES DE COLOR */
+            /* ========================= */
+            --color-principal: #1A365D;       /* Azul navy profundo */
+            --color-secundario: #2B6CB0;      /* Azul medio */
+            --color-complementario-1: #38A169; /* Verde */
+            --color-complementario-2: #DD6B20; /* Naranja */
+            --color-texto: #2D3748;           /* Gris oscuro para texto */
+            --color-fondo: #F7FAFC;           /* Fondo claro opcional */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-texto);
+            padding: 40px;
+            line-height: 1.6;
+            max-width: 1400px;
+            margin: 0 auto;
+            border: 1px solid gainsboro;
+            background-color: #fff;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-principal);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--color-secundario);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--color-complementario-1);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-principal);
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-principal);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-complementario-2);
+            text-decoration: underline;
+        }
+
+        /* ========================= */
+        /* PALETA DE COLORES */
+        /* ========================= */
+
+        .paleta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .paleta > p {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .color-box {
+            width: 180px;
+            height: 120px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .color-box:hover {
+            transform: translateY(-4px);
+        }
+
+        .principal {
+            background-color: var(--color-principal);
+        }
+
+        .secundario {
+            background-color: var(--color-secundario);
+        }
+
+        .comp1 {
+            background-color: var(--color-complementario-1);
+        }
+
+        .comp2 {
+            background-color: var(--color-complementario-2);
+        }
+
+        /* ========================= */
+        /* ICONOGRAFÍA */
+        /* ========================= */
+
+        .iconografia {
+            display: flex;
+            justify-content: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .iconografia article {
+            width: 200px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #f8fafc;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .iconografia article:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .iconografia .material-icons {
+            font-size: 28px;
+            color: var(--color-principal);
+        }
+
+        .unicode article {
+            font-size: 1.1rem;
+        }
+
+        .unicode span {
+            font-size: 28px;
+            margin-right: 8px;
+        }
+
+        .chuleta_css {
+            margin-left: 50px;
+            margin-bottom: 25px;
+        }
+
+        .chuleta_css li {
+            margin-bottom: 6px;
+        }
+
+        .tipografia {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-secundario);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Manual de Estilo</h1>
+        <p>
+            Sistema visual limpio y profesional basado en la tipografía <strong>Poppins</strong> 
+            y una paleta de colores sobria centrada en azules, con acentos de verde y naranja. 
+            Ideal para interfaces modernas, dashboards o sitios corporativos.
+        </p>
+    </section>
+	
+	<section>
+        <h2>Paleta de Colores</h2>
+
+        <div class="paleta">
+            <p>
+                Se han declarado 4 colores principales + color de texto mediante variables CSS 
+                (<code>:root</code>). Cada caja muestra el nombre y el código hexadecimal real.
+            </p>
+
+            <div class="color-box principal">
+                Color Principal<br>
+                #1A365D
+            </div>
+
+            <div class="color-box secundario">
+                Color Secundario<br>
+                #2B6CB0
+            </div>
+
+            <div class="color-box comp1">
+                Color Complementario 1<br>
+                #38A169
+            </div>
+
+            <div class="color-box comp2">
+                Color Complementario 2<br>
+                #DD6B20
+            </div>
+        </div>
+    </section>
+	
+    <section>
+        <h2>Tipografía</h2>
+        <p>
+            Se utiliza la fuente <strong>Poppins</strong> (Google Fonts) con distintos pesos 
+            (300–700). Los colores de los títulos y enlaces se controlan con las variables CSS.
+        </p>
+
+        <h4>Chuleta CSS</h4>
+        <ul class="chuleta_css">
+            <li><strong>font-weight</strong> → Grosor de la fuente (300, 400, 500, 600, 700…)</li>
+            <li><strong>font-size</strong> → Tamaño de la fuente</li>
+            <li><strong>font-family</strong> → Familia de la fuente</li>
+            <li><strong>color</strong> → Color de la fuente</li>
+            <li><strong>text-decoration</strong> → Efectos (subrayado, none…)</li>
+        </ul>
+
+        <div class="tipografia">
+            <h1>Cómo se ven los títulos h1</h1>
+            <h2>Cómo se ven los títulos h2</h2>
+            <h3>Cómo se ven los títulos h3</h3>
+            <p>Este es un párrafo de ejemplo para mostrar la jerarquía tipográfica con Poppins.</p>
+            <a href="#">Este es un enlace (hover cambia de color)</a>
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Componentes</h2>
+
+        <h3>
+            Galeria de iconos incluidos.
+        </h3>
+
+        <p>Incluye por lo menos 4 iconos para incluir en tu pagina web</p>
+        <div class="iconografia">
+
+
+            <div class="externos">
+                <h3>Fuente externa. </h3>
+                 <article>
+                    <span class="material-icons">home</span>
+                    Home
+                </article>
+                <article>
+                    <span class="material-icons">person</span>
+                    Usuario
+                </article>
+                <article>
+                    <span class="material-icons">settings</span>
+                    Ajustes
+                </article>
+                <article>
+                    <span class="material-icons">favorite</span>
+                    Favorito
+                </article>
+            </div>
+            <div class="unicode">
+                <h3>Iconografia con unicode.</h3>
+                <article>
+                    <span>★</span> Estrella
+                </article>
+                <article>
+                    <span>✉</span> Correo
+                </article>
+                <article>
+                    <span>⚙</span> Engranaje
+                </article>
+                <article>
+                    <span>❤</span> Corazón
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
