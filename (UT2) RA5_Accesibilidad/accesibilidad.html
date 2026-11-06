@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción en actividad</title>
+    <style>
+        p.decisiones {
+            color: red;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inscripción en actividad</h1>
+
+    <p>Completa el siguiente formulario para inscribirte.</p>
+
+    <form action="#" method="post" novalidate>
+
+        <!-- Nombre -->
+        <div>
+            <label for="nombre">Nombre y apellidos *</label>
+            <input type="text" id="nombre" name="nombre" aria-required="true" autocomplete="name">
+        </div>
+        <p class="decisiones">
+            Decisión: Se asoció correctamente el label con for/id. Se añadió
+            aria-required para validación y anuncio a lectores de pantalla. Se cambió el span
+            por un label semántico. Se añadió autocomplete="name".
+        </p>
+
+        <!-- Correo -->
+        <div>
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" aria-required="true" autocomplete="email">
+        </div>
+        <p class="decisiones">
+            Decisión: Se corrigió type="email" para validación nativa de formato. Se
+            asoció el label con for. Se añadieron aria-required. Se añadió autocomplete="email".
+        </p>
+
+        <!-- Edad -->
+        <div>
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="1" max="120" inputmode="numeric">
+        </div>
+        <p class="decisiones">
+            Decisión: Se cambió type="text" por type="number" con min/max para validación
+            semántica y de datos. Se eliminó el tabindex incorrecto (el orden natural del DOM es preferible).
+        </p>
+
+        <!-- Teléfono -->
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+        </div>
+        <p class="decisiones">
+            Decisión: Se cambió type="number" (incorrecto para teléfonos) por type="tel".
+            Se asoció el label correctamente y se añadió autocomplete="tel".
+        </p>
+
+        <!-- Fecha de nacimiento -->
+        <div>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+        <p class="decisiones">
+            Decisión: Se cambió el párrafo por un label asociado. Se usó type="date" para validación nativa, mejor UX y
+            semántica correcta.
+        </p>
+
+        <!-- Turno preferido -->
+        <fieldset>
+            <legend id="turno-legend">Turno preferido *</legend>
+            <div>
+                <input type="radio" id="turno-manana" name="turno" value="manana" aria-required="true">
+                <label for="turno-manana">Mañana</label>
+            </div>
+            <div>
+                <input type="radio" id="turno-tarde" name="turno" value="tarde">
+                <label for="turno-tarde">Tarde</label>
+            </div>
+            <div>
+                <input type="radio" id="turno-noche" name="turno" value="noche">
+                <label for="turno-noche">Noche</label>
+            </div>
+        </fieldset>
+        <p class="decisiones">
+            Decisión: Se usó fieldset + legend para agrupar semánticamente los radios (obligatorio
+            en accesibilidad). Cada radio tiene su propio label asociado. Se añadió aria-required en el
+            primer radio del grupo. Se usó aria-labelledby implícito vía legend. Se eliminaron los spans.
+        </p>
+
+        <!-- Tipo de actividad -->
+        <fieldset>
+            <legend>Tipo de actividad</legend>
+            <div>
+                <input type="checkbox" id="act-senderismo" name="actividad" value="senderismo">
+                <label for="act-senderismo">Senderismo</label>
+            </div>
+            <div>
+                <input type="checkbox" id="act-escalada" name="actividad" value="escalada">
+                <label for="act-escalada">Escalada</label>
+            </div>
+            <div>
+                <input type="checkbox" id="act-ciclismo" name="actividad" value="ciclismo">
+                <label for="act-ciclismo">Ciclismo</label>
+            </div>
+        </fieldset>
+        <p class="decisiones">
+            Decisión: Se usó fieldset + legend para el grupo de checkboxes. Cada checkbox tiene
+            label propio asociado con for/id. Se eliminaron los spans.
+        </p>
+
+        <!-- Código de participante -->
+        <div>
+            <label for="codigo">Código de participante *</label>
+            <input type="text" id="codigo" name="codigo" placeholder="ABC-123" aria-required="true"
+                pattern="[A-Z]{3}-[0-9]{3}" aria-describedby="codigo-desc"
+                title="Formato: tres letras mayúsculas, guion y tres dígitos (ej. ABC-123)">
+            <p id="codigo-desc">El código debe tener el formato ABC-123.</p>
+        </div>
+        <p class="decisiones">
+            Decisión: Se asoció el label. Se añadieron aria-required, pattern para validación HTML5
+            del formato ABC-123 y aria-describedby apuntando a la descripción. Se eliminó el tabindex incorrecto.
+        </p>
+
+        <!-- Años de experiencia -->
+        <div>
+            <label for="experiencia">Años de experiencia</label>
+            <input type="number" id="experiencia" name="experiencia" min="0" max="80" inputmode="numeric">
+        </div>
+        <p class="decisiones">
+            Decisión: Se eliminó el tabindex forzado. Se añadió min/max para validación razonable.
+            El orden de tabulación sigue el orden del DOM.
+        </p>
+
+        <!-- Observaciones -->
+        <div>
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+        </div>
+        <p class="decisiones">
+            Decisión: Se eliminó el tabindex incorrecto. El label ya estaba correctamente asociado.
+        </p>
+
+        <!-- Información importante -->
+        <div role="note" aria-labelledby="info-importante">
+            <p id="info-importante">
+                Información importante: recibirás la confirmación por correo electrónico.
+            </p>
+            <a href="#" tabindex="-1">Este elemento debe estar fuera del foco</a>
+        </div>
+        <p class="decisiones">
+            Decisión: Se añadió role="note" y aria-labelledby para identificar el bloque informativo.
+            Al enlace se le puso tabindex="-1" para sacarlo del orden de tabulación (según el requisito "debe estar
+            fuera del foco").
+        </p>
+
+        <!-- Condiciones -->
+        <div>
+            <input type="checkbox" id="condiciones" name="condiciones" aria-required="true">
+            <label for="condiciones">Acepto las condiciones de la actividad *</label>
+        </div>
+        <p class="decisiones">
+            Decisión: Se asoció correctamente el label al checkbox. Se añadió aria-required porque es
+            obligatorio.
+        </p>
+
+        <!-- Botones -->
+        <button type="submit">Enviar inscripción</button>
+        <button type="reset">Resetear formulario</button>
+        <p class="decisiones">
+            Decisión: Se eliminó el tabindex del botón de envío (el orden natural es correcto).
+            El div con onclick se sustituyó por un botón type="reset" semántico y accesible (sin necesidad de JavaScript
+            personalizado).
+        </p>
+
+        <!-- Nota de campos obligatorios -->
+        <p aria-hidden="true">
+            Se marcan con * los campos obligatorios. (Esto no deberá aparecer en los lectores de pantalla)
+        </p>
+        <p class="decisiones">
+            Decisión: Se añadió aria-hidden="true" exactamente como se solicitó para que los lectores de pantalla
+            ignoren este texto visual.
+        </p>
+
+    </form>
+</body>
+
+</html>

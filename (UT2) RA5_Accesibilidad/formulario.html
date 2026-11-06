@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="form_contacto">formulario de contacto</h1>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quod a molestias assumenda fuga debitis quasi sed, saepe commodi deserunt nemo quisquam molestiae voluptatum ut repudiandae ipsam aliquam. Accusamus, ipsum.</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quod a molestias assumenda fuga debitis quasi sed, saepe commodi deserunt nemo quisquam molestiae voluptatum ut repudiandae ipsam aliquam. Accusamus, ipsum.</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quod a molestias assumenda fuga debitis quasi sed, saepe commodi deserunt nemo quisquam molestiae voluptatum ut repudiandae ipsam aliquam. Accusamus, ipsum.</p>
+<!--
+    aria-labelledby hace referencia a la etiqueta de da titulo al elemento, independientemente de su posicion, en este caso el h1 form_contacto
+
+-->
+    <form action="" method="get" aria-labelledby="form_contacto" >
+<h1>Registro datos de usuario</h1>
+<!--label + for, el for referencia al identificador del input al que hace referencia esa label. Ademas de darle un nombre descriptivo al input, si pulsamos sobre el label nos pone el foco sobre el input referenciado -->
+<label for="nombre">Nombre:</label>   
+<input type="text" name="nombre" id="nombre" placeholder="Alejandro Navazo" required  >
+<br>
+<label for="email">Email:</label>
+<!--Utilizaremos los tipos de input mas ajustados posibles, en este caso email, html aplica validaciones y restriciones al formato por defecto-->
+<!--Podemos utilizar pattern para validar, dentro del pattern podemos incluir expresiones regulares-->
+<!--En la etiqueta title podemos ampliar la informacion por defecto del error que se produce.-->
+<input type="email" name="email" id="email" pattern="[a-z]+@[a-z]+\.(com|es)" title="El formato deve ser texto@dominio.com o texto@dominio.es" >
+<br>
+<label for="pass">Contraseña</label>
+<!-- aria-describedby indica el identificador de la etiqueta que describe en este caso el formato que tiene que cumplir la cadena del campo input-->
+<!--maxlength y minlength indican logitud minimo y maximo del input-->
+<input type="password" name="pass" id="pass" aria-describedby="descripcion_contraseña" minlength="6" maxlength="18" >
+<p id="descripcion_contraseña">LA contraseña debe tener como minimo 12 caracteres, mayusculas, minusculas y  un caracter espcial</p>
+<br>
+<button >Cerrar</button>
+<!--role indica que rol adopta la etiqueta, SOLO SE USA en caso de que la etiqueta adopte un rol que no es el suyo propio, en el ejemplo un p adopta un rol de un link-->
+<!--tabindex=0 AÑADIMOS el foco de este elemento cuando manejamos la pagina por teclado-->
+<p onclick="abrirOfertas()" style="border: 1px solid red" tabindex="0" role="link">Haga click aqui para acceder a la parte de ofertas</p>
+<!--ESTO ESTA MAL, a un a no hace falta poner que adopta el rol de un link, por que esa informacion ya la da el HTML-->
+<a href="" role="link">link </a>
+
+<!--role como el div toma la funcion de un button utilizamos ese role -->
+<div class="button" onclick="abrirVentana()" role="button" aria->Click aqui</div>
+<button onclick="abrirVentana()">Click aqui</button>
+<!--fielset hace la agrupación semantica de campos con la misma funcion, el título sera el legend-->
+<fieldset>
+    <legend>Direccion de contacto</legend>
+<label for="nombre">Direccion:</label>   
+<!--placeholder da un ejemplo de la informaicon que va a ir inluida en el intpu  -->
+<input type="text" name="direccion" id="direccion" placeholder="C\ Vitoria nº2 1ºb">
+<br>
+<label for="email">CP:</label>
+<input type="text" name="cp" id="cp"  >
+<br>
+<label for="tfno">tfno:</label>
+<input type="tel" name="tfno" id="tfno" pattern="[0-9]{9}">
+<br>
+<label for="edad">edad:</label>
+<!--incluimos valores maximos y minimos para validar el input number  -->
+<input type="number" name="edad" id="edad" min="18" max="64" aria->
+<br>
+<label for="edad">nacimiento:</label>
+<!--type date hace que me aparezca un selector de fecha automaticamente, impidiendo datos erroneos-->
+<input type="date" name="nacimiento" id="nacimiento" >
+<br>
+<label for="ciudad">Ciudad:</label>
+<input type="text" name="ciudad" id="ciudad">
+<br>
+</fieldset>
+<!--aria-hidden elementos que estan ocultos para un lector de pantalla-->
+<p aria-hidden="true">Descripcion de la publicidad externa</p>
+<img src="" alt="" aria-hidden="true">
+<!--tabindex=-1 quitamos el foco de este elemento cuando manejamos la pagina por teclado-->
+<a href="" tabindex="-1" aria-hidden="true">Publicidad externa a nuestra pagina</a>
+<!--fielset hace la agrupación semantica de campos con la misma funcion, adquiere especial importacia a la hora de agrupar, radiobuttons o checkbox.-->
+<fieldset style="border: none;">
+    <legend>Como quieres que nos comuniquemos contigo</legend>
+
+<label for="mail">Email</label>
+<input type="radio" name="contacto" id="mail">
+<label for="telefono">Telefono</label>
+<input type="radio" name="contacto" id="telefono">
+<label for="sms">SMS</label>
+<input type="radio" name="contacto" id="sms">
+</fieldset>
+<input type="submit" value="Enviar">
+</form>
+<h2 id="condiciones"> Condiciones del formulario</h2>
+<span style="border:1px solid black">Elemento en linea</span>
+<p style="border:1px solid red">Elemento en bloque</p>
+
+<!--aria-labelledby="condiciones" indica la label que da titulo al p-->
+<p aria-labelledby="condiciones">Condiciones del formulario, su titulo h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tenetur provident officiis sit repellat, sint asperiores error laboriosam unde tempore facilis iste voluptatum, libero, voluptatibus obcaecati ad? Commodi, dolorem natus.</p>
+
+</body>
+</html>
