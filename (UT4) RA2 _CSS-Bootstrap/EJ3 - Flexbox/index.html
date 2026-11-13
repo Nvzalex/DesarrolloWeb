@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi espacio creativo</title>
+    <style>
+      /* Estilos generales: no relacionados con Flexbox */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #f7f7f3;
+        color: #252b27;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .cabecera {
+        min-height: 76px;
+        padding: 0 7%;
+        background: #fff;
+        border-bottom: 1px solid #e8e9e3;
+      }
+
+      .logo {
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: -2px;
+      }
+
+      .logo span {
+        color: #e47750;
+      }
+
+      .navegacion a,
+      .footer-inferior a {
+        color: #69716b;
+        font-size: 13px;
+      }
+
+      .boton-contacto,
+      .boton {
+        padding: 12px 18px;
+        border-radius: 5px;
+        background: #e47750;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      main {
+        width: min(1080px, 86%);
+        margin: 0 auto;
+      }
+
+      .presentacion {
+        padding: 85px 0;
+      }
+
+      .etiqueta {
+        color: #9a765f;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      h1 {
+        margin: 20px 0;
+        font-size: clamp(43px, 6vw, 68px);
+        line-height: 1.02;
+        letter-spacing: -3px;
+      }
+
+      h1 span {
+        color: #e47750;
+      }
+
+      .presentacion-texto > p:not(.etiqueta) {
+        max-width: 410px;
+        margin-bottom: 25px;
+        color: #747b74;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .imagen-falsa {
+        min-height: 270px;
+        background: #d9dfcb;
+        color: #53634b;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+        letter-spacing: 2px;
+      }
+
+      .nota-imagen {
+        color: #899087;
+        font-size: 11px;
+      }
+
+      .proyectos {
+        padding: 35px 0 75px;
+        border-top: 1px solid #e3e6df;
+      }
+
+      .titulo-seccion {
+        margin-bottom: 25px;
+      }
+
+      .titulo-seccion h2,
+      .sobre-mi h2 {
+        margin: 8px 0 0;
+        font-size: 29px;
+        letter-spacing: -1px;
+      }
+
+      .titulo-seccion > a {
+        color: #d56e49;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .tarjeta {
+        padding: 14px;
+        background: white;
+        border: 1px solid #e9ebe5;
+        border-radius: 7px;
+      }
+
+      .miniatura {
+        height: 85px;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .miniatura-uno {
+        background: #a9b995;
+      }
+
+      .miniatura-dos {
+        background: #c28d72;
+      }
+
+      .miniatura-tres {
+        background: #8d9cae;
+      }
+
+      .tarjeta-contenido {
+        min-width: 0;
+      }
+
+      .tarjeta-cabecera h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .tarjeta-cabecera > span {
+        color: #9a9f98;
+        font-size: 11px;
+      }
+
+      .tarjeta-contenido > p {
+        margin: 8px 0 10px;
+        color: #7c837c;
+        font-size: 12px;
+      }
+
+      .etiquetas span {
+        padding: 5px 8px;
+        border-radius: 3px;
+        background: #f1f3ed;
+        color: #697763;
+        font-size: 10px;
+      }
+
+      .flecha {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #f5eee8;
+        color: #d56e49;
+        font-size: 17px;
+      }
+
+      .sobre-mi {
+        margin-bottom: 75px;
+        padding: 30px;
+        background: #e9eddf;
+        border-radius: 8px;
+      }
+
+      .sobre-mi-icono {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: #d2ddbd;
+        color: #687e4f;
+        font-size: 30px;
+      }
+
+      .sobre-mi-texto > p:last-child {
+        max-width: 520px;
+        margin-bottom: 0;
+        color: #717a6d;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .boton-oscuro {
+        background: #28372d;
+      }
+
+      footer {
+        padding: 35px 7% 20px;
+        background: #26342b;
+        color: white;
+      }
+
+      .footer-superior {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #465349;
+      }
+
+      .logo-footer span {
+        color: #f09a72;
+      }
+
+      .footer-superior p {
+        color: #c0c9bf;
+        font-size: 12px;
+      }
+
+      .footer-superior > a:last-child {
+        color: #f0a17d;
+        font-size: 12px;
+      }
+
+      .footer-inferior {
+        padding-top: 18px;
+        color: #aeb9ae;
+        font-size: 10px;
+      }
+
+      @media (max-width: 700px) {
+        .cabecera {
+          padding: 15px 6%;
+        }
+
+        main {
+          width: 88%;
+        }
+
+        .presentacion {
+          padding: 55px 0;
+        }
+
+        .imagen-falsa {
+          min-height: 210px;
+        }
+
+        .miniatura {
+          height: 75px;
+        }
+
+        .sobre-mi {
+          padding: 22px;
+        }
+
+        .boton-oscuro {
+          margin-left: 80px;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .boton-contacto {
+          padding: 10px;
+          font-size: 10px;
+        }
+
+        .navegacion a {
+          font-size: 11px;
+        }
+
+        .titulo-seccion h2,
+        .sobre-mi h2 {
+          font-size: 24px;
+        }
+
+        .miniatura {
+          height: 65px;
+        }
+
+        .tarjeta {
+          padding: 9px;
+        }
+
+        .tarjeta-cabecera h3 {
+          font-size: 13px;
+        }
+
+        .tarjeta-contenido > p {
+          font-size: 10px;
+        }
+
+        .flecha {
+          width: 27px;
+          height: 27px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <a class="logo" href="#">CREA<span>.</span></a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </nav>
+
+      <a class="boton-contacto" href="#contacto">Contactar</a>
+    </header>
+
+    <main>
+      <section class="presentacion" id="inicio">
+        <div class="presentacion-texto">
+          <p class="etiqueta">DISEÑO · FOTOGRAFÍA · CREATIVIDAD</p>
+          <h1>Ideas que<br /><span>toman forma.</span></h1>
+          <p>Un espacio para compartir proyectos, experimentar con nuevas ideas y mostrar aquello que me inspira.</p>
+          <a class="boton" href="#proyectos">Ver mis proyectos</a>
+        </div>
+
+        <div class="presentacion-imagen">
+          <div class="imagen-falsa">CREATIVIDAD<br />EN MOVIMIENTO</div>
+          <span class="nota-imagen">Colección personal · 2026</span>
+        </div>
+      </section>
+
+      <section class="proyectos" id="proyectos">
+        <div class="titulo-seccion">
+          <div>
+            <p class="etiqueta">UNA SELECCIÓN</p>
+            <h2>Proyectos recientes</h2>
+          </div>
+          <a href="#contacto">Ver todos →</a>
+        </div>
+
+        <div class="lista-proyectos">
+          <article class="tarjeta">
+            <div class="miniatura miniatura-uno">01</div>
+            <div class="tarjeta-contenido">
+              <div class="tarjeta-cabecera">
+                <h3>Identidad visual</h3>
+                <span>2026</span>
+              </div>
+              <p>Diseño de marca para un pequeño estudio creativo.</p>
+              <div class="etiquetas"><span>Diseño</span><span>Marca</span></div>
+            </div>
+            <a class="flecha" href="#contacto" aria-label="Ver proyecto Identidad visual">↗</a>
+          </article>
+
+          <article class="tarjeta">
+            <div class="miniatura miniatura-dos">02</div>
+            <div class="tarjeta-contenido">
+              <div class="tarjeta-cabecera">
+                <h3>Fotografía urbana</h3>
+                <span>2025</span>
+              </div>
+              <p>Una colección de imágenes de diferentes ciudades.</p>
+              <div class="etiquetas"><span>Fotografía</span><span>Ciudad</span></div>
+            </div>
+            <a class="flecha" href="#contacto" aria-label="Ver proyecto Fotografía urbana">↗</a>
+          </article>
+
+          <article class="tarjeta">
+            <div class="miniatura miniatura-tres">03</div>
+            <div class="tarjeta-contenido">
+              <div class="tarjeta-cabecera">
+                <h3>Web personal</h3>
+                <span>2025</span>
+              </div>
+              <p>Una página sencilla para presentar mi trabajo.</p>
+              <div class="etiquetas"><span>Web</span><span>HTML y CSS</span></div>
+            </div>
+            <a class="flecha" href="#contacto" aria-label="Ver proyecto Web personal">↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="sobre-mi" id="sobre-mi">
+        <div class="sobre-mi-icono">✳</div>
+        <div class="sobre-mi-texto">
+          <p class="etiqueta">UN POCO SOBRE MÍ</p>
+          <h2>Crear, probar y aprender.</h2>
+          <p>Me gusta combinar diseño y tecnología para construir experiencias digitales claras, útiles y agradables.</p>
+        </div>
+        <a class="boton boton-oscuro" href="#contacto">Hablemos</a>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <div class="footer-superior">
+        <a class="logo logo-footer" href="#">CREA<span>.</span></a>
+        <p>¿Tienes una idea? Me encantará conocerla.</p>
+        <a href="mailto:hola@ejemplo.com">hola@ejemplo.com ↗</a>
+      </div>
+      <div class="footer-inferior">
+        <span>© 2026 CREA. Todos los derechos reservados.</span>
+        <div><a href="#inicio">Inicio</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
