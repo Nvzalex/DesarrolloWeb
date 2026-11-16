@@ -5,140 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .relative {
-        .caja1 {
-          padding: 25px 15px;
-          width: 250px;
-          box-sizing: border-box;
-          border: 1px solid black;
-          display: inline-block;
+  .relative {
+    position: relative;
+  }
 
-          img {
-            max-width: 100%;
-            border: 1px solid black;
-          }
+  .relative .caja1 {
+    position: relative;          
+    padding: 25px 15px;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 15px;
+    vertical-align: top;
+  }
 
-          div {
-            & > span:first-of-type {
-              background-color: red;
-              color: white;
-            }
-          }
+  .relative .caja1 img {
+    max-width: 100%;
+    border: 1px solid black;
+    display: block;
+  }
 
-          h3 {
-            font-weight: 100;
-            font-size: 18px;
-            border: 1px solid black;
-          }
 
-          p {
-            margin-bottom: 10px;
-            margin-top: 10px;
+  .discount {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 14px;
+    z-index: 10;
+  }
 
-            &:first-of-type {
-              font-weight: 900;
-              font-size: 24px;
 
-              span {
-                margin-left: 10px;
-                color: #999;
-                font-weight: normal;
-                font-size: 16px;
-              }
-            }
+  .relative .caja1:nth-child(1) .discount {
+    top: 10px;
+    left: 10px;
+  }
 
-            &:nth-of-type(2) {
-              font-weight: 900;
 
-              span {
-                margin-left: 5px;
+  .relative .caja1:nth-child(2) .discount {
+    top: 10px;
+    right: 10px;
+  }
 
-                &:first-of-type {
-                  color: orange;
-                }
-              }
-            }
 
-            &:nth-of-type(3) {
-              font-weight: 900;
-              color: green;
-            }
+  .relative .caja1:nth-child(3) .discount {
+    bottom: 10px;
+    left: 10px;
+  }
 
-            &:last-of-type {
-              color: #999;
-              font-weight: bold;
-            }
-          }
-        }
-      }
 
-      .absolute {
-        .caja1 {
-          padding: 25px 15px;
-          width: 250px;
-          box-sizing: border-box;
-          border: 1px solid black;
-          display: inline-block;
+  .relative .caja1:nth-child(4) .discount {
+    bottom: 10px;
+    right: 10px;
+  }
 
-          img {
-            max-width: 100%;
-            border: 1px solid black;
-          }
 
-          div {
-            & > span:first-of-type {
-              background-color: red;
-              color: white;
-            }
-          }
+  .relative .caja1 h3 {
+    font-weight: 100;
+    font-size: 18px;
+    border: 1px solid black;
+  }
 
-          h3 {
-            font-weight: 100;
-            font-size: 18px;
-            border: 1px solid black;
-          }
+  .relative .caja1 p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 
-          p {
-            margin-bottom: 10px;
-            margin-top: 10px;
+  .relative .caja1 p:first-of-type {
+    font-weight: 900;
+    font-size: 24px;
+  }
 
-            &:first-of-type {
-              font-weight: 900;
-              font-size: 24px;
+  .relative .caja1 p:first-of-type span {
+    margin-left: 10px;
+    color: #999;
+    font-weight: normal;
+    font-size: 16px;
+  }
 
-              span {
-                margin-left: 10px;
-                color: #999;
-                font-weight: normal;
-                font-size: 16px;
-              }
-            }
+  .relative .caja1 p:nth-of-type(2) {
+    font-weight: 900;
+  }
 
-            &:nth-of-type(2) {
-              font-weight: 900;
+  .relative .caja1 p:nth-of-type(2) span:first-of-type {
+    color: orange;
+  }
 
-              span {
-                margin-left: 5px;
+  .relative .caja1 p:nth-of-type(3) {
+    font-weight: 900;
+    color: green;
+  }
 
-                &:first-of-type {
-                  color: orange;
-                }
-              }
-            }
+  .relative .caja1 p:last-of-type {
+    color: #999;
+    font-weight: bold;
+  }
 
-            &:nth-of-type(3) {
-              font-weight: 900;
-              color: green;
-            }
+  .absolute {
+    position: relative;
+    height: 900px;  
+  }
 
-            &:last-of-type {
-              color: #999;
-              font-weight: bold;
-            }
-          }
-        }
-      }
-    </style>
+  .absolute .caja1 {
+    position: absolute;
+    padding: 25px 15px;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+
+  .absolute .caja1 img {
+    max-width: 100%;
+    border: 1px solid black;
+    display: block;
+  }
+
+  /* Posicionamos las 4 tarjetas en las 4 esquinas del contenedor .absolute */
+  .absolute .caja1:nth-child(1) {
+    top: 20px;
+    left: 20px;
+  }
+
+  .absolute .caja1:nth-child(2) {
+    top: 20px;
+    right: 20px;
+  }
+
+  .absolute .caja1:nth-child(3) {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .absolute .caja1:nth-child(4) {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* El descuento dentro de cada tarjeta absolute también se posiciona en las 4 esquinas */
+  .absolute .caja1 .discount {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* 1ª → arriba izquierda */
+  .absolute .caja1:nth-child(1) .discount {
+    top: 10px;
+    left: 10px;
+  }
+
+  /* 2ª → arriba derecha */
+  .absolute .caja1:nth-child(2) .discount {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* 3ª → abajo izquierda */
+  .absolute .caja1:nth-child(3) .discount {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  /* 4ª → abajo derecha */
+  .absolute .caja1:nth-child(4) .discount {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .absolute .caja1 h3 {
+    font-weight: 100;
+    font-size: 18px;
+    border: 1px solid black;
+  }
+
+  .absolute .caja1 p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .absolute .caja1 p:first-of-type {
+    font-weight: 900;
+    font-size: 24px;
+  }
+
+  .absolute .caja1 p:first-of-type span {
+    margin-left: 10px;
+    color: #999;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .absolute .caja1 p:nth-of-type(2) {
+    font-weight: 900;
+  }
+
+  .absolute .caja1 p:nth-of-type(2) span:first-of-type {
+    color: orange;
+  }
+
+  .absolute .caja1 p:nth-of-type(3) {
+    font-weight: 900;
+    color: green;
+  }
+
+  .absolute .caja1 p:last-of-type {
+    color: #999;
+    font-weight: bold;
+  }
+</style>
   </head>
 
   <body>
@@ -233,6 +312,19 @@
     </section>
     <section class="Ej3">
       <h2>Ejercicio 3</h2>
+      <article class="caja1">
+        <div>
+          <img src="phone.webp" alt="" />
+          <span class="discount">7%</span>
+        </div>
+        <div>
+          <h3 style="font-size: 1.25rem; height: 1.75rem;">Apple iPhone 17 256GB Lavanda</h3>
+          <p style="color: #bf0019;">1.029€ <span style="text-decoration: line-through; color: #000;">1.109€</span></p>
+          <p>4,7/5 <span>&#x2605;</span><span>509 opiniones</span></p>
+          <span><span style="color: darkgreen;">Envío gratis. </span> <span>Entrega el lunes, 9 de noviembre</span></span>
+          <p>Ver otras opciones.</p>
+        </div>
+        </article>
     </section>
   </body>
 </html>
