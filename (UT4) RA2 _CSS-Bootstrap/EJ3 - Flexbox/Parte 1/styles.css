@@ -1,0 +1,131 @@
+/* ===== HEADER ===== */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navegacion {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+/* ===== PRESENTACIÓN ===== */
+.presentacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  .presentacion-texto {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .presentacion-imagen {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .imagen-falsa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* =====PROYECTOS ===== */
+.proyectos {
+  .titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .tarjeta {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      .miniatura {
+        width: 95px;
+        min-width: 95px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .tarjeta-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .tarjeta-cabecera {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .etiquetas {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+/* ===== SOBRE MÍ ===== */
+.sobre-mi {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sobre-mi-icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sobre-mi-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== FOOTER ===== */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
