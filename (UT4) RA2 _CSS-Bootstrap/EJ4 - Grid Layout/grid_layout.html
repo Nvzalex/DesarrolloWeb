@@ -1,152 +1,201 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rejilla de productos</title>
     <style>
-      main {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-      .fila {
-        justify-content: stretch;
-        align-items: center;
-        align-content: start;
-        img {
-          size: 30%;
-        }
+
+      body {
+        padding: 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 16px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .caja {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 12px;
+        gap: 8px;
+      }
+
+      .caja img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .caja h2 {
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.3;
+        max-height: calc(1.3em * 3); /* Máximo 3 líneas */
+        overflow: hidden;
+      }
+
+      .precio {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .valoracion {
+        font-size: 0.8rem;
+      }
+
+      .envio {
+        font-size: 0.8rem;
+      }
+
+      .caja a {
+        font-size: 0.8rem;
+        margin-top: auto;
       }
     </style>
   </head>
   <body>
-    <div class="fila" id="fila1">
+    <main class="grid">
+      <!-- Fila 1 -->
       <article class="caja">
         <img src="./placeholder.png" alt="Producto" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
-    </div>
-    <div class="fila" id="fila2">
+
+      <!-- Fila 2 -->
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
-        <a href="#">Ver otras opciones</a>
-      </article>
-      <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
-        <p class="precio">XXX,99€</p>
-        <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
-        <a href="#">Ver otras opciones</a>
-      </article>
-    </div>
-    <div class="fila" id="fila3">
-      <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
-        <p class="precio">XXX,99€</p>
-        <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
+        <a href="#">Ver otras opciones</a>
+      </article>
+
+      <!-- Fila 3 -->
+      <article class="caja">
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
+        <p class="precio">XXX,99€</p>
+        <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
       <article class="caja">
-        <img src="./placeholder.png" alt="Portátil Alurin Flex Advance" />
-        <h2>Nombre del producto extendido / Caracteristica 1 / Caracteristica 2/ Caracteristica 3</h2>
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
         <p class="precio">XXX,99€</p>
         <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
-        <p class="envio"><span class="icono"></span> Envío gratis. Entrega mañana</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
         <a href="#">Ver otras opciones</a>
       </article>
-    </div>
+      <article class="caja">
+        <img src="./placeholder.png" alt="Producto" />
+        <h2>Nombre del producto extendido / Característica 1 / Característica 2 / Característica 3</h2>
+        <p class="precio">XXX,99€</p>
+        <p class="valoracion"><span class="estrellas">★★★★☆</span> 4,3/5 · xx opiniones</p>
+        <p class="envio">Envío gratis. Entrega mañana</p>
+        <a href="#">Ver otras opciones</a>
+      </article>
+    </main>
   </body>
 </html>
